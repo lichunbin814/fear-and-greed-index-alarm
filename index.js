@@ -52,5 +52,11 @@ const BgGreen = "\x1b[42m";
         process.exit(1);
     }
 
+    try {
+        await sgMail.send(msg);
+    } catch (error) {
+        console.error(`${BgRed}%s${Reset}`, "Failed to send email:", error);
+    }
+
     process.exit(0);
 })();

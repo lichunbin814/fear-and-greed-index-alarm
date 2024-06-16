@@ -19,6 +19,9 @@ jobs:
     env:
       FNG_MIN: ${{ secrets.FNG_MIN }}
       FNG_MAX: ${{ secrets.FNG_MAX }}
+      SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+      EMAIL_TO: ${{ secrets.EMAIL_TO }}
+      SENDGRID_FROM:  ${{ secrets.SENDGRID_FROM }}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:

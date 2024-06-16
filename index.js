@@ -54,8 +54,10 @@ const BgGreen = "\x1b[42m";
 
     try {
         await sgMail.send(msg);
+        console.log('Email sent')
     } catch (error) {
         console.error(`${BgRed}%s${Reset}`, "Failed to send email:", error);
+        process.exit(1);
     }
 
     process.exit(0);
